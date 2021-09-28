@@ -199,6 +199,18 @@ impl From<Flags> for u16 {
     }
 }
 
+impl AsMut<Flags> for Flags {
+    fn as_mut(&mut self) -> &mut Flags {
+        self
+    }
+}
+
+impl AsRef<Flags> for Flags {
+    fn as_ref(&self) -> &Flags {
+        self
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
